@@ -1,0 +1,25 @@
+.ao-country-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.ao-country-card {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+.ao-country-card__content h2,
+.ao-country-card__content h3 {
+  line-height: 1;
+  margin: 0 0 0.5em;
+}
+.ao-country-card__content h2 {
+  font-size: 1.1em;
+}
+.ao-country-card__content h3 {
+  font-size: 0.9em;
+}
+.ao-country-card__content dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}

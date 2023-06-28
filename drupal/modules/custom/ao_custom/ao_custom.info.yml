@@ -1,0 +1,6 @@
+name: Country Flags
+description: An example module that pulls country information from a public API and displays it on the front-end.
+package: AO
+
+type: module
+core_version_requirement: ^9.0

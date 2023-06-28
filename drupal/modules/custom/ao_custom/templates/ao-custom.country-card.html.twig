@@ -1,0 +1,17 @@
+<div class="ao-country-card">
+  <div class="ao-country-card__media">
+    <figure>
+      <img src="{{ content.flag_image }}" alt="{{content.flag_alt }}"/>
+    </figure>
+  </div>
+  <div class="ao-country-card__content">
+    <h2>{{content.name}}</h2>
+    <h3>{{content.name_long}}</h3>
+    <dl>
+      <dt>Population</dt>
+      <dd>{{ content.population }} </dd>
+      <dt><a href="{{ content.map }}" target="_blank" class="button button--small">🔗 Google Maps</a></dt>
+      <dd>&nbsp;</dd>
+    </dl>
+  </div>
+</div>

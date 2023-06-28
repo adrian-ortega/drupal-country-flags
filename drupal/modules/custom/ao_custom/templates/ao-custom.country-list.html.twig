@@ -1,0 +1,10 @@
+<div class="ao-list">
+  <h2>Countries</h2>
+  {% if content.countries is not empty %}
+  <div class="ao-country-cards">
+    {% for country in content.countries %}
+      {{ country }}
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

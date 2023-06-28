@@ -1,0 +1,11 @@
+ao_custom.config_page:
+  path: '/admin/config/ao'
+  defaults: 
+    _form: '\Drupal\ao_custom\Form\APIConfigForm'
+ao_custom.countries:
+  path: '/ao/countries'
+  defaults:
+    _controller: '\Drupal\ao_custom\Controller\ListController::view'
+    _tile: 'Countries and their Flags'
+  requirements:
+    _permission: 'access content'

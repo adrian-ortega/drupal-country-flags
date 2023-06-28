@@ -1,0 +1,4 @@
+ao-custom-styling:
+  css:
+    theme:
+      assets/css/ao-custom.css: {}

@@ -1,0 +1,17 @@
+<?php
+
+function ao_custom_theme($existing, $type, $theme, $path)
+{
+  return [
+    'ao_custom.country-list' => [
+      'variables' => [
+        'content' => null
+      ]
+    ],
+    'ao_custom.country-card' => [
+      'variables' => [
+        'content' => null
+      ]
+    ]
+  ];
+}

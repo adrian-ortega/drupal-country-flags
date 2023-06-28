@@ -1,0 +1,33 @@
+# Drupal with PostgreSQL
+#
+# Access via "http://localhost:8686"
+#   (or "http://$(docker-machine ip):8686" if using docker-machine)
+
+version: '3.1'
+
+services:
+
+  drupal:
+    container_name: Drupal
+    image: drupal:9-apache
+    ports:
+      - 8686:80
+    volumes:
+      - ./drupal/modules:/opt/drupal/web/modules
+      - ./drupal/profiles:/opt/drupal/web/profiles
+      - ./drupal/themes:/opt/drupal/web/themes
+      # - ./drupal/sites:/opt/drupal/web/sites
+    restart: always
+  mysqldb:
+    container_name: DrupalDb
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=drupal
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  db:
